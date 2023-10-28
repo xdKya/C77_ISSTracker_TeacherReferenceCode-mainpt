@@ -16,30 +16,7 @@ export default class HomeScreen extends Component {
         return (
             <View style={styles.container}>
                 <SafeAreaView style={styles.droidSafeArea} />
-                <ImageBackground source={require('../assets/bg.png')} style={styles.backgroundImage}>
-                    <View style={styles.titleBar}>
-                        <Text style={styles.titleText}>App Rastreador EEI</Text>
-                    </View>
-
-                    <TouchableOpacity style={styles.routeCard} onPress={() =>
-                        this.props.navigation.navigate("IssLocation")
-                    }>
-                        <Text style={styles.routeText}>Localização da EEI</Text>
-                        <Text style={styles.knowMore}>{"Saiba Mais --->"}</Text>
-                        <Text style={styles.bgDigit}>1</Text>
-                        <Image source={require("../assets/iss_icon.png")} style={styles.iconImage}></Image>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={styles.routeCard} onPress={() =>
-                        this.props.navigation.navigate("Meteors")
-                    }>
-                        <Text style={styles.routeText}>Meteoros</Text>
-                        <Text style={styles.knowMore}>{"Saiba Mais --->"}</Text>
-                        <Text style={styles.bgDigit}>2</Text>
-                        <Image source={require("../assets/meteor_icon.png")} style={styles.iconImage}></Image>
-                    </TouchableOpacity>
-
-                </ImageBackground>
+               
             </View>
         )
     }
@@ -55,14 +32,6 @@ const styles = StyleSheet.create({
     backgroundImage: {
         flex: 1,
         resizeMode: 'cover',
-    },
-    routeCard: {
-        flex: 0.25,
-        marginLeft: 50,
-        marginRight: 50,
-        marginTop: 50,
-        borderRadius: 30,
-        backgroundColor: 'white'
     },
     titleBar: {
         flex: 0.15,
