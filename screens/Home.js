@@ -16,7 +16,16 @@ export default class HomeScreen extends Component {
         return (
             <View style={styles.container}>
                 <SafeAreaView style={styles.droidSafeArea} />
-               
+                <ImageBackground source={require('../assets/bg.png')} style={styles.backgroundImage}>
+                    <View style={styles.titleBar}>
+                        <Text style={styles.titleText}>App Rastreador EEI</Text>
+                    </View>
+
+                    
+
+                   
+
+                </ImageBackground>
             </View>
         )
     }
@@ -32,6 +41,14 @@ const styles = StyleSheet.create({
     backgroundImage: {
         flex: 1,
         resizeMode: 'cover',
+    },
+    routeCard: {
+        flex: 0.25,
+        marginLeft: 50,
+        marginRight: 50,
+        marginTop: 50,
+        borderRadius: 30,
+        backgroundColor: 'white'
     },
     titleBar: {
         flex: 0.15,
